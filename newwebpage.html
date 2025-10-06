@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Modern Landing — Your Product</title>
+  <meta name="description" content="A clean, single-file responsive landing page template." />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#6ee7b7;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:#e6eef8;background:linear-gradient(180deg,#071024 0%,#071527 60%);-webkit-font-smoothing:antialiased}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#04263a}
+    nav{display:flex;gap:16px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px}
+    nav a:hover{color:white;background:var(--glass)}
+    .cta{background:linear-gradient(90deg,#7ef9c7,#60a5fa);padding:8px 14px;border-radius:10px;color:#04263a;font-weight:600;text-decoration:none}
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:28px 0}
+    .eyebrow{font-weight:600;color:var(--accent);letter-spacing:0.6px}
+    h1{font-size:clamp(28px,4vw,44px);margin:8px 0 12px;color:#fff;line-height:1.05}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .actions{display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:12px;background:white;color:#04263a;font-weight:700;text-decoration:none}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:14px;padding:18px;box-shadow:0 8px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    /* Feature list */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+    .feature{padding:12px;border-radius:12px;background:rgba(255,255,255,0.02)}
+    .feature h4{margin:8px 0 6px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+    /* Gallery */
+    .gallery{display:flex;gap:10px;flex-wrap:wrap}
+    .thumb{flex:1 1 140px;min-height:90px;border-radius:10px;background:linear-gradient(180deg,#092036,#061426);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+    /* Contact */
+    form{display:grid;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:#e6eef8}
+    input::placeholder,textarea::placeholder{color:var(--muted)}
+    footer{margin-top:40px;padding:20px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+    /* Responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .features{grid-template-columns:1fr 1fr}
+      nav{display:none}
+    }
+    @media (max-width:520px){
+      .features{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">LP</div>
+        <div>
+          <div style="font-weight:700">YourProduct</div>
+          <div style="font-size:12px;color:var(--muted)">Simple • Fast • Modern</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#get">Get Started</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">NEW</div>
+          <h1>Simple landing page to showcase your product — built as a single file</h1>
+          <p class="lead">Clean layout, responsive breakpoints, and small JavaScript for a fast experience. Use this as a template for apps, projects, portfolios, or marketing pages.</p>
+          <div class="actions">
+            <a class="btn" href="#get">Start Free</a>
+            <a class="card" href="#features">Explore features →</a>
+          </div>
+
+          <div class="grid-2">
+            <div class="card">
+              <strong>Fast to edit</strong>
+              <p style="margin:8px 0 0;color:var(--muted);font-size:14px">All code in one file — change text, colors, or images quickly.</p>
+            </div>
+            <div class="card">
+              <strong>Responsive</strong>
+              <p style="margin:8px 0 0;color:var(--muted);font-size:14px">Looks great on phones, tablets, and desktops.</p>
+            </div>
+          </div>
+
+          <div id="features" class="features">
+            <div class="feature card">
+              <div style="font-size:20px">⚡</div>
+              <h4>Performance</h4>
+              <div class="muted">Minimal assets for fast load times.</div>
+            </div>
+            <div class="feature card">
+              <div style="font-size:20px">🎨</div>
+              <h4>Customizable</h4>
+              <div class="muted">Easy to restyle with CSS variables.</div>
+            </div>
+            <div class="feature card">
+              <div style="font-size:20px">🔒</div>
+              <h4>Privacy-friendly</h4>
+              <div class="muted">No analytics or trackers included.</div>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3 style="margin-top:0">Live preview</h3>
+            <p style="color:var(--muted)">This panel imitates a product screenshot or small dashboard. Replace with images or embedded demos.</p>
+            <div style="margin-top:12px;display:grid;gap:8px">
+              <div style="padding:10px;border-radius:8px;background:rgba(255,255,255,0.03);font-weight:600">Users: <span id="users">1,234</span></div>
+              <div style="padding:10px;border-radius:8px;background:rgba(255,255,255,0.03);">Uptime: 99.99%</div>
+              <div style="padding:10px;border-radius:8px;background:rgba(255,255,255,0.03);">Version: 1.0.0</div>
+            </div>
+          </div>
+
+          <div style="height:12px"></div>
+
+          <div class="card">
+            <h4 style="margin:0 0 8px">Get started</h4>
+            <ol style="margin:0 0 0 18px;color:var(--muted)">
+              <li>Edit the text</li>
+              <li>Add images or screenshots</li>
+              <li>Deploy to Netlify / Vercel / GitHub Pages</li>
+            </ol>
+          </div>
+        </aside>
+      </section>
+
+      <section id="gallery" style="margin-top:28px">
+        <h3 style="color:white;margin-bottom:12px">Gallery</h3>
+        <div class="gallery">
+          <div class="thumb">Screenshot A</div>
+          <div class="thumb">Screenshot B</div>
+          <div class="thumb">Screenshot C</div>
+          <div class="thumb">Screenshot D</div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:28px">
+        <h3 style="color:white;margin-bottom:8px">Contact</h3>
+        <div class="card">
+          <form id="contactForm">
+            <input id="name" placeholder="Your name" required />
+            <input id="email" placeholder="Email" type="email" required />
+            <textarea id="message" placeholder="Message" rows="4" required></textarea>
+            <div style="display:flex;gap:8px;align-items:center">
+              <button class="btn" type="submit">Send message</button>
+              <div id="status" style="color:var(--muted);font-size:13px"></div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> YourProduct · Built with ❤️</div>
+      <div style="font-size:13px">Made by you — editable single-file template</div>
+    </footer>
+  </div>
+
+  <script>
+    // Small interactive bits
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Fake user counter that increments
+    (function(){
+      var el = document.getElementById('users');
+      var n = parseInt(el.textContent.replace(/,/g,''),10) || 1234;
+      setInterval(function(){ n += Math.floor(Math.random()*5); el.textContent = n.toLocaleString(); }, 2200);
+    })();
+
+    // Simple contact form handler (no backend) — shows success message
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var status = document.getElementById('status');
+      status.textContent = 'Sending...';
+      setTimeout(function(){ status.textContent = 'Message sent — we will reply soon!';
+        document.getElementById('contactForm').reset();
+      }, 900);
+    });
+  </script>
+</body>
+</html>
